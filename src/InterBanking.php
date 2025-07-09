@@ -1,12 +1,12 @@
 <?php
 
-namespace Divulgueregional\ApiInterV2;
+namespace EmersonArt\ApiInterV2;
 
 use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Message;
-use Divulgueregional\ApiInterV2\enums\EnvironmentEnum;
+use EmersonArt\ApiInterV2\enums\EnvironmentEnum;
 
 class InterBanking
 {

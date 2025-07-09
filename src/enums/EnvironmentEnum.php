@@ -1,6 +1,6 @@
 <?php
 
-namespace Divulgueregional\ApiInterV2\enums;
+namespace EmersonArt\ApiInterV2\enums;
 
 class EnvironmentEnum
 {
