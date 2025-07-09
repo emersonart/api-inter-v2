@@ -6,6 +6,7 @@ use Exception;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\ClientException;
 use GuzzleHttp\Psr7\Message;
+use Divulgueregional\ApiInterV2\enums\EnvironmentEnum;
 
 class InterBanking
 {
@@ -15,8 +16,9 @@ class InterBanking
     private $client;
     function __construct(array $config)
     {
+        $url = EnvironmentEnum::fromLabel($config['environment'] ?? 'PRODUCTION')->getUrlBase();
         $this->client = new Client([
-            'base_uri' => 'https://cdpj.partners.bancointer.com.br',
+            'base_uri' => $url,
         ]);
 
         if (isset($config['verify'])) {
